@@ -13,7 +13,7 @@ These notes are organized by exam domain and include resources I found online th
 Feel free to reuse or build your own version from here!
 
 - [Domain 1: Security Concepts](domain1-security-concepts.md)
-- [Domain 2: Threats, Vulnerabilities & Mitigations](domain2-threats, vulnerabilities & mitigations.md)
+- [Domain 2: Threats, Vulnerabilities & Mitigations](domain2-threats-vulnerabilities-mitigations.md)
 - [Domain 3: Security Architecture](domain3-security-architecture.md)
 - [Domain 4: Security Operations](domain4-security-operations.md)
 - [Domain 5: Security Program Management](domain5-security-program-management.md)
