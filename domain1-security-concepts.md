@@ -1,206 +1,222 @@
-Domain 1 Notes (Security+ SY0-701)
+## Domain 1
 
-⸻
+---
 
-1.1 - Security Concepts
+### 1.1 CIA / AAA / Non-Repudiation
 
-CIA Triad: Confidentiality, Integrity, Availability
-AAA:
-	•	Authentication: Provides identity
-	•	Authorization: Grants access to resources
-	•	Accounting: Logs and audits activity
+- **CIA Triad**: Confidentiality, Integrity, Availability  
+- **AAA**:  
+  - Authentication → proves identity  
+  - Authorization → grants access  
+  - Accounting → logs/audits actions  
 
-Non-repudiation: The user cannot deny doing something due to proof (e.g., digital signature)
-	•	Proof of origin
-	•	Accountability
-	•	Often used in emails, transactions, secure logs
+**Non-repudiation** means a user **cannot deny** doing something because there’s **proof** (e.g. digital signature)  
+✅ Used in emails, transactions, secure logs  
+✅ Provides proof of origin & accountability
 
-⸻
+---
 
-Security Control Categories & Functional Types (Cheatsheet)
+### Security Control Categories & Functional Types
 
-Keywords matter, but context matters more — types can overlap.
+*Keywords but context matters! (can fit into multiple types)*
 
-Categories:
-	•	Managerial: Policies & procedures — planning & assessment methods
-	•	Technical: Hardware/software — tech controls
-	•	Operational: People-driven daily operations (new in SY0-701)
-	•	Physical: Tangible, facility/real-world objects
+**Control Categories**  
+- **Managerial**: Policies & procedures, planning & assessment  
+- **Technical**: Hardware/software controls  
+- **Operational** (new in SY0-701): People-driven day-to-day controls  
+- **Physical**: Tangible security (locks, CCTV)
 
-Functional Types:
-	•	Deterrent: Discourage violations (e.g., warning signs)
-	•	Preventive: Stop violations (e.g., access control, encryption)
-	•	Directive: Define acceptable behavior (e.g., policy, guidelines)
-	•	Detective: Identify incidents (e.g., audit logs, alerts)
-	•	Corrective: Restore systems (e.g., patching, restore)
-	•	Compensating: Provide alternative controls (e.g., redundancy)
+**Functional Types**  
+- **Deterrent**: discourages (e.g., warning signs)  
+- **Preventive**: blocks (e.g., firewalls, encryption)  
+- **Directive**: guides (e.g., policies)  
+- **Detective**: finds (e.g., audit logs)  
+- **Corrective**: restores (e.g., backups)  
+- **Compensating**: alternatives (e.g., redundancy)
 
-⸻
+---
 
-1.2 - Authorization Models & Zero Trust
+### 1.2 Security Concepts: Authorization Models & Zero Trust
 
-Gap Analysis: Find control deficiencies vs. required standards.
-	•	Prepares for external audits (every few years)
-	•	Differences → Control Gaps → Audit Report
+#### Gap Analysis
 
-Zero Trust Network Architecture
-	•	Control Plane: Makes access decisions (policy engine/admin)
-	•	Data Plane: Executes access and enforces policy (PEP)
-	•	Components:
-	•	Adaptive identity
-	•	Policy-driven access
-	•	Policy enforcement: e.g., Azure AD (Entra ID)
-	•	Implicit trust zone elimination
+- Compares current state vs. new regulatory requirements  
+- Identifies **control gaps** before audits or compliance reviews
 
-⸻
+#### Zero Trust Architecture
 
-Physical Security / Deception Techniques
+- "Never trust, always verify"
+- Removes implicit trust, uses **continuous validation**
 
-Honeypot Method:
-	•	Decoy system to attract attackers and observe behavior
-	•	Doesn’t affect production systems
+**Control Plane**  
+- Policy engine, admin, decision points  
+- Adaptive identity, policy-driven control
 
-Terms:
-	•	Honeypot: Single fake system/service
-	•	Honeynet: Network of honeypots
-	•	Honeyfile: Decoy file (e.g., /docs/salaries.xlsx)
-	•	Honeytoken: Fake credentials or data to trigger alerts
+**Data Plane**  
+- Actual access & usage by subject  
+- Enforced by **Policy Enforcement Point (PEP)** (e.g. Azure Entra ID)
 
-⸻
+---
 
-1.3 - Change Management
+### Physical Security
 
-Change Management Policy: Procedure for making changes to production systems.
-	•	Reviewed, tested, approved
+*(Reference only, to be expanded as needed)*
 
-Change Control: The process of evaluating change requests (sent to CAB).
+---
 
-Standard Operating Procedures:
-	•	Approval process
-	•	Ownership
-	•	Stakeholder & impact analysis
-	•	Test results
-	•	Backout plan
-	•	Maintenance window
+### Deception & Disruption
 
-Technical Considerations:
-	•	Allow/deny lists, legacy dependencies
-	•	Downtime & service/application restarts
+**Honeypots** = fake systems/services to attract attackers  
+- Observe & analyze behavior safely  
+- Low risk to real infrastructure
 
-Documentation: Maintains change records
+| Type       | Description                                       |
+|------------|---------------------------------------------------|
+| Honeypot   | Single fake system (e.g. login page)              |
+| Honeynet   | Network of honeypots                              |
+| Honeyfile  | Single fake file (e.g. hidden spreadsheet)        |
+| Honeytoken | Decoy transaction or credential                   |
 
-Version Control:
-	•	Track dev/test/prod code versions (e.g., Git)
-	•	Detects conflicts
+---
 
-⸻
+### 1.3 Change Management
 
-1.4 - Cryptographic Solutions
+**Change Management Program** = Policies for reviewing, testing, and documenting changes  
+**Change Control** = The actual process of evaluating and approving a change
 
-Encryption:
-	•	Converts plaintext into ciphertext using an algorithm + key
+**Standard Operating Procedures**
+- Approval process
+- Ownership
+- Stakeholder analysis
+- Impact & test results
+- Backout plan
+- Maintenance window
 
-Levels:
-	•	FDE: Full Disk Encryption — entire drive (BitLocker)
-	•	Volume/File: Targeted encryption (e.g., sensitive folders)
-	•	Transport/Communication: TLS, VPNs
+**Technical Considerations**
+- Allow/deny lists
+- Downtime & service restart
+- Legacy systems (e.g., hybrid cloud)
+- Dependencies
 
-Symmetric Encryption:
-	•	One shared secret key (encrypt/decrypt)
-	•	Efficient, fast (AES preferred)
-	•	Key exchange risk
+**Documentation**
+- Record environment states & updates
 
-Asymmetric Encryption:
-	•	Public/private key pair
-	•	Secure exchange, digital signatures
-	•	RSA, ECC
+**Version Control**
+- Tracks software/configuration versions (e.g., Git)
 
-Hybrid: Use asymmetric to exchange symmetric key
+---
 
-Diffie-Hellman / ECC:
-	•	Used for shared key generation
+### 1.4 Cryptographic Solutions & PKI
 
-Algorithms Summary:
-	•	AES: Symmetric, strong
-	•	RSA: Asymmetric, digital signatures, SSL/TLS
-	•	3DES/RC4: Deprecated/insecure
+#### Encryption Types
 
-Digital Signatures:
-	•	SHA-256 (hash) + RSA (encrypt hash)
-	•	Ensures authenticity, integrity, non-repudiation
+| Type       | Key Use                | Common Algorithms                |
+|------------|------------------------|----------------------------------|
+| Symmetric  | Same key for enc/dec   | AES, 3DES, RC4 (legacy)          |
+| Asymmetric | Public/private key pair| RSA, ECC                         |
 
-⸻
+- **Asymmetric**: used for secure web (HTTPS), digital signatures  
+- **Symmetric**: efficient for large data, but less secure for key exchange
 
-PKI (Public Key Infrastructure)
+**Hybrid Approach**  
+- Use **asymmetric** to securely exchange a **symmetric** session key  
+- Example: HTTPS session negotiation
 
-Concept:
-	•	Uses public/private key pairs for secure communication
-	•	Validates identity, creates trust via certificates
+#### Key Exchange
 
-PKI Components:
-	•	CA: Issues certificates
-	•	Root CA: Top of chain (self-signed)
-	•	Intermediate CA: Issues end certs
-	•	RA: Verifies identity
-	•	PKI Client: Sends CSR (Certificate Signing Request)
-	•	CRL/OCSP: Check revocation status
+- **Diffie-Hellman**: creates shared key using asymmetric math  
+- **ECC**: shorter key, stronger encryption  
 
-Chain of Trust:
-	•	End cert → Intermediate CA → Root CA
+---
 
-OCSP vs CRL:
+#### Certificate Basics & PKI Flow
 
-Method	Description	Notes
-CRL	Periodic revocation list	Slower
-OCSP	Real-time status check	Faster
+**PKI = Identity + Encryption + Trust**
 
-<img width="699" height="781" alt="PKI github" src="https://github.com/user-attachments/assets/5940a110-956e-4e8d-9a7c-24436a43103a" />
+1. Browser visits HTTPS site  
+2. Site sends digital certificate (X.509)  
+3. Browser verifies **chain of trust**  
+4. Uses asymmetric → exchange symmetric session key  
+5. Rest of communication = symmetric encryption
 
+**Key Components**
 
-Certificate Types:
+| Component        | Role                                           |
+|------------------|------------------------------------------------|
+| Root CA          | Self-signed, top of trust chain                |
+| Intermediate CA  | Issues end-entity certs                        |
+| RA               | Verifies identity before certificate issuance  |
+| CSR              | Certificate Signing Request sent to RA/CA     |
+| CRL / OCSP       | Check if certificate was revoked               |
 
-Type	Use Case
-Wildcard	Subdomains (*.example.com)
-SAN	Multi-domain cert
-Code Signing	App/software integrity
-Self-signed	Internal/testing only
-Email/User/Machine	Identity validation
-EV/OV/DV	Domain and org verification levels
+---
 
+#### Revocation: CRL vs. OCSP
 
-⸻
+| Method | Description                  | Notes                         |
+|--------|------------------------------|-------------------------------|
+| CRL    | Certificate Revocation List  | Periodic, larger data         |
+| OCSP   | Online status check          | Real-time, faster             |
+| Stapling | OCSP response bundled by server | Reduces client-side queries |
 
-Cryptographic Tools & Concepts
+---
 
-Hashing:
-	•	Converts input to fixed output (e.g., SHA-256)
-	•	One-way, used for data integrity
+#### Certificate Types
 
-Salting:
-	•	Adds randomness before hashing passwords
+| Type                  | Use Case                                |
+|-----------------------|------------------------------------------|
+| Wildcard              | Subdomains (e.g., *.example.com)        |
+| SAN                   | Multi-domain                            |
+| Code Signing          | Software authenticity                   |
+| Self-signed           | Lab/testing                             |
+| Email Certificate     | Secure email (S/MIME)                   |
+| User/Computer         | Auth in enterprise                      |
+| Domain Validation (DV)| Proves control of domain                |
+| Org Validation (OV)   | Proves legal/business identity          |
+| Extended Validation   | Highest trust, browser bar display      |
 
-Key Stretching:
-	•	PBKDF2, bcrypt — protect weak passwords
+---
 
-TPM:
-	•	Security chip, enables secure boot, used with BitLocker
+#### Cryptographic Tools
 
-HSM:
-	•	External hardware for key protection in data centers
+- **TPM**: motherboard chip for encryption/secure boot  
+- **HSM**: secure hardware for key storage (enterprise-level)  
+- **KMS**: software for central key management  
+- **Secure Enclave**: chip for mobile/biometric data isolation  
 
-KMS:
-	•	Centralized software for key management (e.g., in cloud)
+---
 
-Secure Enclave:
-	•	Isolated chip in device (biometric security)
+#### Extra Crypto Concepts
 
-⸻
+**Hashing**
+- One-way, irreversible  
+- Used in integrity & digital signature  
+- Algorithms: SHA-256 (preferred), MD5 (collision risk)
 
-Data Protection Techniques
+**Salting**
+- Adds randomness to hashes  
+- Especially for password storage
 
-Technique	Function	Use Case
-Obfuscation	Hides logic/code	Reverse engineering protection
-Steganography	Hides message existence	Covert communication
-Tokenization	Replaces sensitive data	PCI DSS compliance
-Data Masking	Partially hides data	Customer dashboards/testing
+**Digital Signatures**
+- Uses **RSA** to encrypt SHA-256 hash  
+- Verifies origin, integrity, and non-repudiation
 
+**Key Stretching**
+- Strengthens weak keys (PBKDF2, bcrypt)
+
+**Blockchain**
+- Distributed, tamper-proof ledger  
+- Uses consensus to validate transactions
+
+---
+
+### Obfuscation, Steganography & Data Protection
+
+| Technique       | Purpose                                       | Keywords                                   |
+|-----------------|-----------------------------------------------|--------------------------------------------|
+| Obfuscation     | Scrambles code for reverse engineering defense| Protect source code                        |
+| Steganography   | Hides message inside media                    | Covert communication                       |
+| Tokenization    | Replace data with non-sensitive token         | Credit cards, secure vault                 |
+| Data Masking    | Hide parts of data (****1234)                 | UI display, testing                        |
+
+---
