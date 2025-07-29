@@ -18,7 +18,7 @@ Feel free to reuse or build your own version from here!
 - [Domain 4: Security Operations](domain4-security-operations.md)
 - [Domain 5: Security Program Management](domain5-security-program-management.md)
 - [Glossary](#) _(coming soon)_
-- [Cheat Sheets](#) _(coming soon)_
+- [Cheatsheet](cheatsheet.md)
 
 ---
 
