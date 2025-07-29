@@ -159,6 +159,8 @@
 | OCSP   | Online status check          | Real-time, faster             |
 | Stapling | OCSP response bundled by server | Reduces client-side queries |
 
+<img width="699" height="781" alt="PKI github" src="https://github.com/user-attachments/assets/ad2ade20-fcf3-46de-af43-47ae056b2aa3" />
+
 ---
 
 #### Certificate Types
