@@ -30,13 +30,14 @@
 ---
 
 ## Access Control Models
-| Model | What it is | When to use | Strengths/Weakness | Exam scenario |
-|-------|------------|-------------|---------------------|---------------|
-| **MAC** | Objects labeled with clearance levels | Military, high security | Very strict, least flexible | Q: Which model is based on labels & clearance? |
-| **DAC** | Owner decides access | Typical OS (Windows, Linux) | Flexible but weak | Q: File owner grants access – which model? |
-| **RBAC** | Access based on roles/groups | Enterprises with defined job roles | Easier to manage | Q: Admin gives access by “HR group” – which model? |
-| **Rule-based** | System-enforced rules | Firewalls, ACLs | Automated control | Q: Firewall allowing traffic by rule – which model? |
-| **ABAC** | Based on attributes (IP, time, device) | Modern cloud apps | Fine-grained | Q: User only allowed if using corp laptop during work hours – which model? |
+
+| Model | Description | Analogy | When to Use | Exam Scenario |
+|-------|-------------|---------|-------------|---------------|
+| **MAC** | Mandatory Access Control: Labels + clearance levels. | Military “Top Secret” clearance. | Gov/military, highly secure data. | “User cannot change perms, system enforces labels.” |
+| **DAC** | Discretionary Access Control: Owner decides who gets access. | Windows folder “Right click → Share.” | Most common in OS (Windows, Unix). | “File owner grants or changes permissions.” |
+| **RBAC** | Role-Based Access Control: Permissions tied to roles/groups. | HR group auto gets HR docs. | Large orgs, scalability. | “Finance team gets finance system.” |
+| **Rule-based** | System-enforced rules (ACLs, firewall-like). | If/else conditions. | Network/firewall style enforcement. | “Access only if time=9AM–5PM.” |
+| **ABAC** | Attribute-Based Access Control: Multiple factors (role, IP, time, location). | Cloud fine-grained policy. | Modern cloud & zero trust. | “User must be in HR role, using corp IP, during work hours.” |
 
 ---
 
