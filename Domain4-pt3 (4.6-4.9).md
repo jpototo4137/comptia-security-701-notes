@@ -75,82 +75,66 @@
 | **Ephemeral Credentials** | Disposable credentials | Cloud access, temp accounts | Q: Admin gets creds valid for one session – which? |
 
 
-🔑 Identity & Access Management (IAM)
+# 🔑 Identity and Access Management (IAM) Big Picture Cheat Sheet
 
-What it is: The whole system of who you are (identity) and what you can do (access).
-	•	When to use: Always, in any org with employees, devices, or apps.
-	•	Why: Without IAM, everyone could log in as “admin” → chaos.
-	•	Big picture analogy: Like a building with security badges. IAM decides who gets a badge, what doors it opens, and when it expires.
-	•	Exam tip: Questions about provisioning accounts, SSO, authentication → always IAM.
+---
 
-⸻
+## 🚀 IAM (Identity & Access Management)
+- **What:** Framework for identities + access.  
+- **When to use:** Always, any org with employees/devices/apps.  
+- **Why:** Prevents chaos (no “everyone is admin”).  
+- **Analogy:** Security badges in a building.  
+- **Exam clue:** Provisioning, SSO, account lifecycle → **IAM**.
 
-🔐 Multi-Factor Authentication (MFA)
+---
 
-What it is: Using more than one way to prove you are you (password + phone code, fingerprint + smart card, etc.).
-	•	When to use: Sensitive accounts (admins, VPN, remote workers, banking, cloud).
-	•	Why: Passwords leak. MFA stops attackers even if they stole your password.
-	•	Big picture analogy: Like needing both your apartment key and a fingerprint scanner to enter.
-	•	Exam tip: If scenario says “reduce password attacks” or “prevent stolen password misuse” → Answer is MFA.
+## 🔐 MFA (Multi-Factor Authentication)
+- **What:** More than 1 proof of identity (password + code, fingerprint + card).  
+- **When to use:** Sensitive accounts (admins, VPN, banking, cloud).  
+- **Why:** Stops stolen password attacks.  
+- **Analogy:** Apartment key + fingerprint scanner.  
+- **Exam clue:** Scenario about “reduce password attacks” → **MFA**.
 
-⸻
+---
 
-👑 Privileged Access Management (PAM)
+## 👑 PAM (Privileged Access Management)
+- **What:** Special handling for **admin/root** accounts.  
+- **When to use:** IT staff, cloud admins, privileged users.  
+- **Why:** If admin hacked → attacker owns everything.  
+- **Features:**  
+  - Just-in-Time (temporary rights)  
+  - Vaulting (store admin creds, no one sees them)  
+  - Ephemeral creds (self-destruct after use)  
+- **Analogy:** Master key melts after 1 hr use.  
+- **Exam clue:** “Temporary elevated rights / admin account risk” → **PAM**.
 
-What it is: Special handling of admin accounts (root, domain admin).
-	•	When to use: For IT staff, cloud admins, or anyone with high-level rights.
-	•	Why: If an admin account is hacked, attacker owns everything. PAM reduces risk by:
-	•	Giving admins only temporary rights (Just-in-Time).
-	•	Storing passwords in vaults (no one sees them).
-	•	Using ephemeral credentials (self-destruct after use).
-	•	Big picture analogy: Like checking out the master key to a building only for 1 hour, then the key melts away.
-	•	Exam tip: If scenario says “limit exposure of admin accounts” or “temporary elevated rights” → Answer is PAM.
+---
 
-⸻
+## 🗂️ Access Control Models
+| Model | Description | Analogy | Exam Scenario |
+|-------|-------------|---------|---------------|
+| **MAC** | Mandatory labels & clearance | Military clearance | “Top Secret file” |
+| **DAC** | Owner decides access | Windows folder “Share” | “File owner gives perms” |
+| **RBAC** | Based on role/job group | HR group gets HR files | “Finance team access” |
+| **Rule-based** | System-enforced rules | Firewall ACLs | “If/else conditions” |
+| **ABAC** | Multi-criteria (location, IP, time) | Cloud fine-grained | “Time-based or location-based access” |
 
-🗂️ Access Control Models
+---
 
-These are philosophies for “who can access what.”
-	•	MAC (Mandatory): Based on clearance labels. Think military.
-	•	DAC (Discretionary): Owner decides. Think Windows folder “share” button.
-	•	RBAC (Role-Based): Based on your job title/role. Think “HR group has HR folder access”.
-	•	Rule-Based: Based on system rules. Think firewalls, ACLs.
-	•	ABAC (Attribute-Based): Based on many attributes (location, device, time). Think cloud apps.
-	•	Exam tip:
-	•	Military/clearance? → MAC
-	•	File owner grants access? → DAC
-	•	Groups/jobs? → RBAC
-	•	If/else rules? → Rule-based
-	•	Cloud fine-grained? → ABAC
+## 📡 IAM Protocols & Standards
 
-⸻
+| Protocol/Standard | What it does | Analogy | When/Exam use |
+|-------------------|-------------|---------|---------------|
+| **LDAP** | Directory protocol for users/groups | Company phonebook | “Query user DB” |
+| **SAML** | Web SSO standard (XML) | Passport for web apps | “Enterprise SSO” |
+| **OAuth** | Delegated access (authorization) | Giving valet keys | “Grant access without password” |
+| **OpenID Connect** | Identity/auth on top of OAuth | “Sign in with Google” | “Auth built on OAuth” |
 
-📡 LDAP, SAML, OAuth, OpenID Connect (the ones confusing you)
+---
 
-Think of these as languages/protocols different apps use to talk about “who you are”:
-	•	LDAP (Directory phonebook):
-	•	Like a company’s phonebook → stores users, passwords, groups.
-	•	Example: When you log into Windows domain, it checks LDAP.
-	•	Exam tip: If scenario says “query user database” → LDAP.
-	•	SAML (Enterprise SSO ticket):
-	•	XML-based “passport” for web apps.
-	•	Example: You log into your company portal → click Salesforce → already logged in.
-	•	Exam tip: If scenario says “web SSO with a standard” → SAML.
-	•	OAuth (Delegated permission):
-	•	Lets one app act on your behalf without sharing your password.
-	•	Example: You let a fitness app post to your Twitter without giving it your Twitter password.
-	•	Exam tip: If scenario says “grant access without sharing creds” → OAuth.
-	•	OpenID Connect (Who you are, built on OAuth):
-	•	Adds authentication (identity) on top of OAuth.
-	•	Example: “Sign in with Google.” OAuth allows access; OpenID proves you are really you.
-	•	Exam tip: If scenario says “authentication on top of OAuth” → OpenID Connect.
-
-⸻
-
-📝 TL;DR Exam Strategy
-	•	IAM = Who gets what identity & access (the whole framework).
-	•	MFA = Stop password-only hacks.
-	•	PAM = Protect admin/root accounts.
-	•	Access models = Philosophies (MAC, DAC, RBAC, ABAC).
-	•	LDAP/SAML/OAuth/OIDC = Protocols that enable IAM in real life.
-
+# 📝 TL;DR Exam Strategy
+- **IAM** = Whole framework (accounts, lifecycle, SSO).  
+- **MFA** = Stop password-only hacks.  
+- **PAM** = Protect admin/root accounts.  
+- **Access models** = Philosophies (MAC, DAC, RBAC, ABAC).  
+- **LDAP/SAML/OAuth/OIDC** = Protocols that *make IAM work in real life*.  
