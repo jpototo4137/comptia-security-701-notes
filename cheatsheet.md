@@ -71,3 +71,37 @@ Tip: Responsibility shifts **more to the CSP** as you go from IaaS → SaaS.
 | **Multi-Cloud** | Uses multiple public cloud providers | Cost control, vendor flexibility (more complex) |
 
 ---
+#### Vuln Management
+
+🔹 SAST (Static Application Security Testing)
+	•	When: during development phase (before deployment).
+	•	Why: to catch coding flaws early → buffer overflows, injections.
+	•	Scenario keyword: “developer needs to check code for vulnerabilities before running it” → use SAST.
+	•	Limit: can’t test runtime issues (auth, crypto). Produces false positives.
+
+⸻
+
+🔹 Fuzzing (Dynamic Analysis)
+	•	When: during testing phase, after code compiles and runs.
+	•	Why: test how the application reacts to unexpected/random inputs.
+	•	Scenario keyword: “looking for crashes, errors, exceptions” → fuzzing.
+	•	Limit: resource heavy, not efficient for every scenario.
+
+⸻
+
+🔹 Package Monitoring
+	•	When: during software acquisition and deployment.
+	•	Why: to ensure downloaded packages (libraries, updates, dependencies) are from trusted sources and contain no hidden malware/vulnerabilities.
+	•	Scenario keyword: “developer installs library from untrusted repo” → check with package monitoring.
+	•	Limit: Doesn’t test the code, only verifies source integrity.
+
+⸻
+
+🔹 Penetration Testing
+	•	When: after systems are deployed, in production environments (not just dev/test).
+	•	Why: simulate real attacker behavior to confirm exploitable vulnerabilities.
+	•	Scenario keyword: “organization must validate if a vulnerability can be exploited” → pentest.
+	•	Notes:
+	•	Required by compliance (PCI DSS, HIPAA).
+	•	Rules of engagement define scope.
+	•	Risks: may cause DoS/data loss.
