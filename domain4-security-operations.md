@@ -165,7 +165,7 @@
 
 | **Tech** | **Risk/Focus** | **Exam Keyword/Trap** |
 |----------|----------------|-----------------------|
-| **MDM**  | Central mgmt, enforce policies | BYOD vs COPE vs CYOD |
+| **MDM**  | Central mgmt, enforce **policies** | BYOD vs COPE vs CYOD |
 | **BYOD** | User device → insecure | Hardest to secure |
 | **COPE** | Org-owned + personal use | Org has full control |
 | **CYOD** | User chooses device | Still under org control |
