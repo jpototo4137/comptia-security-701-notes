@@ -26,6 +26,27 @@
   - DNS → UDP/53  
   - NTP → UDP/123  
 
+### 🔑 Frequently Asked Ports (Exam Focus)
+| **Service**         | **Port (TCP/UDP)** | **Notes** |
+|----------------------|--------------------|-----------|
+| **FTP (control/data)** | 21 (control), 20 (data) | Insecure → use SFTP/FTPS |
+| **SSH / SFTP / SCP** | 22 | Secure remote login/file transfer |
+| **Telnet**           | 23 | Insecure remote login |
+| **SMTP**             | 25 | Mail transfer (unencrypted) |
+| **DNS**              | 53 TCP/UDP | TCP for zone transfers, UDP for queries |
+| **DHCP**             | 67 (server), 68 (client) | Auto IP assignment |
+| **TFTP**             | 69 | Trivial FTP, insecure |
+| **HTTP / HTTPS**     | 80 / 443 | Web traffic |
+| **POP3 / POP3S**     | 110 / 995 | Email retrieval |
+| **IMAP / IMAPS**     | 143 / 993 | Email retrieval with folders |
+| **SNMP**             | 161/162 UDP | 161 = polling, 162 = traps |
+| **LDAP / LDAPS**     | 389 / 636 | Directory services |
+| **SMB / CIFS**       | 445 | File sharing (Windows) |
+| **Syslog**           | 514 UDP | Log forwarding |
+| **RDP**              | 3389 | Remote desktop |
+| **NTP**              | 123 UDP | Time sync |
+| **Kerberos**         | 88 | Authentication protocol |
+
 ### Firewall Rules
 - Processed **top to bottom**.  
 - General vs specific rules.  
@@ -43,178 +64,3 @@
 | Traditional | Ports & protocols | TCP/UDP filtering |
 | NGFW | Application layer | DPI, stateful inspection |
 | Screened Subnet | Public vs private | Buffer zone |
-
----
-
-## IDS / IPS
-
-- **IDS** → Intrusion Detection System (alerts only).  
-- **IPS** → Intrusion Prevention System (blocks traffic).  
-- Often integrated into **NGFW**.  
-
-### Detection Methods
-- **Signature-based** → exact matches.  
-- **Anomaly-based** → baseline normal activity, flag unusual patterns.  
-
----
-
-## Web Filtering
-
-- **Content filtering** → block by URL, category, or inappropriate content.  
-- Protect against **malware/viruses**.  
-
-### Methods
-- **URL Scanning** → allow/block lists, category filters.  
-- **Agent-based filters** → client software installed on device.  
-- **Proxies** (forward proxy) → sits between user and internet, supports caching, access control, URL filtering.  
-- **Block rules** → based on URLs, categories, dispositions (e.g., allow education).  
-- **Reputation filtering** → automated risk scores + manual lists.  
-- **DNS filtering** → prevents resolving domains flagged as malicious (no IP returned).  
-
----
-
-## Operating System Security
-
-### Active Directory (AD)
-- Centralized **database of network objects**.  
-- Provides **authentication & access control**.  
-- Used for account mgmt (reset pw, add/remove users).  
-
-### Group Policy
-- Centralized console for managing:  
-  - Login scripts  
-  - Network configs (QoS)  
-  - Security parameters  
-
-### Security-Enhanced Linux (SELinux)
-- Adds **Mandatory Access Control (MAC)** to Linux (default is DAC).  
-- Enforces **least privilege**.  
-- Limits application access to reduce breach damage.  
-
----
-
-## Implementation of Secure Protocols
-
-### Unencrypted Protocols
-- Insecure: **Telnet, FTP, SMTP, IMAP**.  
-- Visible in packet captures.  
-
-### Secure Alternatives
-| **Application** | **Insecure** | **Secure** |
-|-----------------|--------------|------------|
-| Remote console | Telnet | SSH |
-| Web browsing | HTTP (80) | HTTPS (443) |
-| Email client | IMAP | IMAPS |
-| File transfer | FTP | SFTP |
-
-### Notes
-- Port number difference ≠ guaranteed security → must confirm encryption is enabled.  
-- Use **packet capture** to verify.  
-- **802.11 Wireless** → open = no encryption; **WPA3** encrypts all user data.  
-- **VPN** → encrypted tunnel for secure transport.  
-
----
-
-## Email Security
-
-### Mail Gateway
-- Filter & monitor inbound/outbound messages.  
-- Often in a screened subnet.  
-
-### SPF (Sender Policy Framework)
-- DNS TXT record lists **authorized mail servers** for a domain.  
-- Receiving server checks if sender is valid.  
-
-### DKIM (DomainKeys Identified Mail)
-- Outgoing mail digitally signed by sender’s server (via public key in DNS).  
-- Ensures authenticity & integrity.  
-
-### DMARC
-- Builds on SPF + DKIM.  
-- Tells receiving servers how to handle failures (reject/quarantine).  
-- Sends compliance reports to domain admin.  
-
----
-
-## Monitoring Data
-
-### File Integrity Monitoring (FIM)
-- Detects unauthorized file changes.  
-- Tools: **Windows SFC**, **Linux Tripwire**, Host-based IPS.  
-
-### Data Loss Prevention (DLP)
-- Prevents **sensitive data leakage**.  
-- Types:  
-  - **Endpoint DLP** → monitors data in use (workstations).  
-  - **Network DLP** → monitors data in motion.  
-  - **Server DLP** → monitors data at rest.  
-
-#### DLP Extensions
-- **USB Blocking** → prevent portable media leaks.  
-- **Cloud-based DLP** → monitor/block sensitive data in cloud services.  
-- **DLP for Email**:  
-  - Inbound: block keywords, quarantine suspicious mail.  
-  - Outbound: detect fraud (wire transfers, PII exfiltration).  
-
----
-
-## Network Access Control (NAC)
-
-### Edge vs Access Control
-- **Edge** = firewall, internet boundary (rarely changes).  
-- **Access control** = flexible user/device-level checks.  
-
-### Posture Assessment
-- Verifies device health before allowing access.  
-- Checks: malware, missing AV, misconfigurations.  
-
-#### Methods
-- **Persistent agents** → permanently installed.  
-- **Dissolvable agents** → run temporarily, terminate after check.  
-- **Agentless NAC** → AD integration; checks at login/logoff.  
-
-**If fail posture assessment** → quarantine, notify admins, retry after remediation.  
-
----
-
-## Endpoint Detection & Response (EDR/XDR)
-
-- **EDR** → endpoint-level detection.  
-  - Signatures, behavioral analysis, ML, process monitoring.  
-  - Lightweight agent.  
-  - Responses: isolate, quarantine, rollback config.  
-
-- **XDR (Extended Detection & Response)** → evolved form of EDR.  
-  - Includes **network + cloud** detection.  
-  - Correlates multiple data sources.  
-  - Improves detection accuracy, reduces false positives.  
-
----
-
-## User Behavior Analytics (UBA)
-
-- Part of XDR platforms.  
-- Monitors: users, hosts, network traffic, data repositories.  
-- Detects **anomalous activity in real time**.  
-- Goal: catch threats early.  
-
----
-
-# Exam Triggers Quick Recall – Modify Enterprise Capabilities (4.5)
-
-- **Firewall** → Traditional (port) vs NGFW (app/Layer 7).  
-- **Firewall rules** → ACL, implicit deny.  
-- **Screened subnet** → buffer zone for public-facing services.  
-- **IDS vs IPS** → detect vs prevent.  
-- **Web filtering** → URL filters, proxies, DNS filtering, reputation.  
-- **Active Directory** → centralized auth + access control.  
-- **Group Policy** → security settings, login scripts.  
-- **SELinux** → MAC on Linux, least privilege.  
-- **Insecure vs secure protocols** → Telnet→SSH, HTTP→HTTPS, FTP→SFTP.  
-- **SPF/DKIM/DMARC** → validate email senders + prevent spoofing.  
-- **FIM** → detect file changes.  
-- **DLP** → stop data leaks (endpoint, network, server, cloud, email, USB).  
-- **NAC** → posture assessment → agent, dissolvable, agentless.  
-- **EDR** → endpoint monitoring.  
-- **XDR** → extends to network/cloud.  
-- **UBA** → detect unusual user activity.
