@@ -309,3 +309,113 @@ Exam Tip
 - If it mentions **SQL injection, XSS, malformed data** → **Input Validation**  
 - If it mentions **static analysis, before runtime, scanning source code** → **SAST**  
 
+---
+
+# Domain 4.2 – Asset Management
+
+## Acquisition / Procurement Process
+**Key activities**  
+- Check for **valid licenses** (avoid pirated software).  
+- Verify **no major vendor security incidents**.  
+- Install **secure OS with latest patches**.  
+
+**Security concerns**  
+- Malware-infected hardware from **untrusted vendor**.  
+
+**Cheatsheet – Acquisition**
+
+| **Activity** | **Why it matters** | **Security concern** |
+|--------------|--------------------|-----------------------|
+| Valid licenses | Avoid pirated software | Malware, legal risk |
+| Vendor check  | Trusted sources only | Vendor compromise |
+| Secure OS     | Patch vulnerabilities | Zero-day exposure |
+
+---
+
+## Assignment / Accounting
+**Key activities**  
+- Define **ownership** → who is responsible (person, dept, team).  
+- Apply **classification** (confidential vs public).  
+
+**Importance**  
+- Ensures appropriate **access controls**.  
+
+**Security concerns**  
+- Unauthorized access → **data breaches**.  
+
+**Cheatsheet – Assignment**
+
+| **Activity** | **Why it matters** | **Security concern** |
+|--------------|--------------------|-----------------------|
+| Ownership    | Accountability | Orphan assets |
+| Classification | Correct access controls | Overexposure |
+| Accounting   | Track responsible party | Insider misuse |
+
+---
+
+## Monitoring / Asset Tracking
+**Key activities**  
+- Maintain **inventory** of assets.  
+  - Track in **CMDB** (Configuration Management Database).  
+- **Enumeration** → identify/document all assets on the network.  
+
+**Importance**  
+- Tracking = faster **incident response**.  
+
+**Security concerns**  
+- **Unknown/untracked assets** = blind spots, higher breach risk.  
+
+**Tracking physical assets**  
+- Maintain up-to-date **asset register** (periodic audits, e.g. annually).  
+- **Tagging & recording** → barcodes/QR codes.  
+
+**Cheatsheet – Monitoring**
+
+| **Activity** | **Why it matters** | **Security concern** |
+|--------------|--------------------|-----------------------|
+| Inventory (CMDB) | Visibility of all assets | Missed assets |
+| Enumeration | Network discovery | Blind spots |
+| Physical tagging | Track hardware | Theft, shadow IT |
+
+---
+
+## Disposal / Decommissioning
+**Key activities**  
+- **Sanitization** → securely erase storage.  
+- **Destruction** → destroy assets beyond recovery.  
+- **Certification** → proof of secure disposal.  
+- **Data retention** → define how long data is kept.  
+
+**Importance**  
+- Improper disposal → **data leaks** / privacy violations.  
+- Deleted data must not be recoverable (even with forensics).  
+- Retention policies = compliance + reduced risk.  
+- **Keeping data longer than needed increases risk**.  
+
+**Security concerns**  
+- Residual data on disposed assets (e.g. incomplete wipes).  
+- Failure to follow **retention policies** (e.g. storing customer data too long).  
+
+**Cheatsheet – Disposal**
+
+| **Activity** | **Why it matters** | **Security concern** |
+|--------------|--------------------|-----------------------|
+| Sanitization | Remove data safely | Residual data |
+| Destruction  | Ensure unrecoverable | Data leaks |
+| Certification | Proof of secure disposal | Audit gaps |
+| Data retention | Compliance, limit risk | Over-retention |
+
+---
+
+# Exam Triggers Quick Recall – Asset Management (4.2)
+
+- **Acquisition** → vendor trust, licenses, patched OS.  
+- **Assignment** → ownership + classification → access controls.  
+- **Monitoring** → CMDB, enumeration, blind spots if missing.  
+- **Physical assets** → tagging, asset register, audits.  
+- **Disposal** → sanitization, destruction, certification, retention policy.  
+- **Exam traps**:  
+  - “Residual data” = incomplete sanitization.  
+  - “Data kept longer than necessary” = retention failure.  
+  - “Unknown devices on network” = poor enumeration/CMDB.  
+  - “No one accountable for asset” = missing ownership/accounting.  
