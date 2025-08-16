@@ -175,7 +175,7 @@ are used by application developers to provide a set of
 automated validations to user input and behavior. Guard rails are not used
 by the help desk team
 
-- **Escalation**
+- **Escalation**: 
 Automation can recognize security events and escalate a security-related
 ticket to the incident response team without any additional human
 interaction.
