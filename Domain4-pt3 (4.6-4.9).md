@@ -180,6 +180,23 @@ Automation can recognize security events and escalate a security-related
 ticket to the incident response team without any additional human
 interaction.
 
+### Automation vs Orchestration vs SOAR
+
+| Concept | What It Means | Scope | Example | Exam Scenario |
+|---------|---------------|-------|---------|---------------|
+| **Automation** | Single task executed by a script/tool | Narrow, task-level | Auto-disable unused account | “System auto-applies patches without admin input” |
+| **Orchestration** | Linking multiple automated tasks across systems | Broader, workflow-level | Auto-create account → assign groups → send ticket → configure access | “Coordinated response across IAM, SIEM, firewall” |
+| **SOAR** (Security Orchestration, Automation & Response) | Platform that combines orchestration + automation + case management | Enterprise-wide | SIEM alert → SOAR auto-triggers block on firewall → opens ticket | “Integrates SIEM alerts with automated remediation” |
+
+Big Picture:
+	•	Automation = “one button does one thing.”
+	•	Orchestration = “connect multiple buttons together into a flow.”
+	•	SOAR = “full platform for orchestration + automation + incident response.”
+
+On the exam, if they ask about “single repetitive task” → Automation.
+If it’s “end-to-end process across multiple tools” → Orchestration.
+If it’s “security alerts auto-handled and tracked” → SOAR.
+
 ---
 
 ### ⚠️ Scripting Considerations
@@ -200,4 +217,7 @@ interaction.
 - Together, they:  
   - Reduce human error  
   - Speed up incident response  
-  - Free humans for analysis, not repetitive work  
+  - Free humans for analysis, not repetitive work
+ 
+
+
