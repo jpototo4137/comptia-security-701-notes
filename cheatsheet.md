@@ -129,3 +129,28 @@ Tip: Responsibility shifts **more to the CSP** as you go from IaaS → SaaS.
 	•	If they ask about network device stats → think SNMP / SNMP traps.
 	•	If they ask about network traffic patterns → think NetFlow.
 	•	If they ask about preventing data leaving → think DLP.
+
+
+ 
+#### Frequently Asked Ports 
+
+| **Service**         | **Port (TCP/UDP)** | **Notes** |
+|----------------------|--------------------|-----------|
+| **FTP (control/data)** | 21 (control), 20 (data) | Insecure → use SFTP/FTPS |
+| **SSH / SFTP / SCP** | 22 | Secure remote login/file transfer |
+| **Telnet**           | 23 | Insecure remote login |
+| **SMTP**             | 25 | Mail transfer (unencrypted) |
+| **DNS**              | 53 TCP/UDP | TCP for zone transfers, UDP for queries |
+| **DHCP**             | 67 (server), 68 (client) | Auto IP assignment |
+| **TFTP**             | 69 | Trivial FTP, insecure |
+| **HTTP / HTTPS**     | 80 / 443 | Web traffic |
+| **POP3 / POP3S**     | 110 / 995 | Email retrieval |
+| **IMAP / IMAPS**     | 143 / 993 | Email retrieval with folders |
+| **SNMP**             | 161/162 UDP | 161 = polling, 162 = traps |
+| **LDAP / LDAPS**     | 389 / 636 | Directory services |
+| **SMB / CIFS**       | 445 | File sharing (Windows) |
+| **Syslog**           | 514 UDP | Log forwarding |
+| **RDP**              | 3389 | Remote desktop |
+| **NTP**              | 123 UDP | Time sync |
+| **Kerberos**         | 88 | Authentication protocol |
+
