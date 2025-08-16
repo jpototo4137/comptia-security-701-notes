@@ -297,7 +297,7 @@ If it’s “security alerts auto-handled and tracked” → SOAR.
 
 ---
 
-### Order of Volatility (Exam Must-Know)  
+### *Order of Volatility (Exam Must-Know)  
 1. CPU registers, cache  
 2. RAM  
 3. Network traffic  
@@ -310,3 +310,132 @@ If it’s “security alerts auto-handled and tracked” → SOAR.
 - Questions will often ask: *“What’s the FIRST step after detecting malware?”* → **Containment**  
 - Or: *“Which evidence should be collected first?”* → **RAM (order of volatility)**  
 - Or: *“Legal team requires preservation of data for court, what’s this called?”* → **Legal Hold**  
+
+
+
+
+# Digital Forensics – Bigger Picture  
+
+## What is Digital Forensics?  
+Digital forensics is the **practice of investigating digital systems after an incident**.  
+- **Collect → Preserve → Analyze → Present** digital evidence.  
+- Think of it as **crime scene investigation for IT**.  
+
+---
+
+## Why do we need it?  
+1. **Find the truth** – what happened, how, when, by whom.  
+2. **Recover from incidents** – identify root cause and stop attackers from returning.  
+3. **Compliance/legal** – many industries require evidence to be handled properly.  
+4. **Accountability** – show customers, regulators, and courts that your response was correct.  
+5. **Future defense** – lessons learned strengthen security posture.  
+
+---
+
+## Why the key concepts exist  
+
+| Concept | Big Picture Purpose | If Ignored → Problem |
+|---------|----------------------|-----------------------|
+| **Legal Hold** | Freeze relevant data so it’s not deleted during a lawsuit. | Critical emails/logs vanish → company fined, case lost. |
+| **Chain of Custody** | Proves evidence wasn’t tampered with. Tracks who handled it, when, and how. | Evidence thrown out in court. |
+| **Acquisition** | Method of collecting data (disk, RAM, logs) in a verifiable way. | Evidence corrupted or incomplete. |
+| **Preservation** | Protects evidence for long-term use. | Data loss, altered files. |
+| **Reporting** | Documents findings in a clear, defensible way. | No one can trust or act on the results. |
+| **E-Discovery** | Supplies electronic documents for lawsuits. | Legal penalties for not producing required info. |
+
+---
+
+## Example: Ransomware Attack  
+- **IR (incident response)**: stops attack & restores from backup.  
+- **Forensics steps in**:  
+  - Collect RAM + logs to see attacker activity.  
+  - Preserve drives for evidence.  
+  - Chain of custody ensures trust.  
+  - Reporting documents exactly what happened.  
+  - Legal hold & e-discovery triggered if lawsuits/regulators get involved.  
+
+---
+
+## Exam Big Picture (Security+)  
+- **IR = contain & recover**.  
+- **Forensics = investigate & prove**.  
+- Exam questions love:  
+  - “What ensures evidence can be used in court?” → **Chain of custody**  
+  - “What prevents deletion of relevant data during litigation?” → **Legal hold**  
+  - “Which evidence is collected first?” → **RAM (order of volatility)**  
+
+---
+
+In short:  
+**Digital forensics = trust + accountability.**  
+Without it, evidence is unreliable, companies can’t defend themselves, and attackers keep coming back.  
+
+# 4.9 Security Data Sources
+
+## Purpose
+- **Support investigations** by gathering **evidence from multiple sources**.  
+- Detect attacks, validate incidents, and correlate across systems.  
+- Security+ exam often shows you a **log snippet** → you must **extract the key info** (IP, time, user, attack type).
+
+---
+
+## Log Data (Where to Look)
+
+| Source | What It Shows | Why It Matters (Exam Use) |
+|--------|---------------|---------------------------|
+| **Firewall Logs** | Allowed/blocked traffic, source/destination IP, port, disposition, URL categories (NGFW). | Identify malicious inbound/outbound traffic. |
+| **Application Logs** | App-specific (Windows Event Viewer, Linux `/var/log`). | Detect failures, privilege escalation, misused apps. |
+| **Endpoint Logs** | Logins, system events, processes, account mgmt. | Spot malware on endpoints, correlate with SIEM. |
+| **OS Security Logs** | Auth attempts, file changes, brute force detection. | Exam loves brute-force detection or failed logins. |
+| **IPS/IDS Logs** | Attack signatures, timestamp, src/dst IP & port. | Detect known exploits; confirm intrusion attempts. |
+| **Network Device Logs** | Switch/router/AP/VPN logs, routing/auth issues. | Track lateral movement or VPN login abuse. |
+| **Security Logs** | Blocked traffic, DNS sinkhole, exploit attempts. | Shows “big picture” threats. |
+
+---
+
+## Other Data Sources
+
+| Source | Description | Why It Matters |
+|--------|-------------|----------------|
+| **Metadata** | Data about data (e.g., email headers, phone GPS, device type). | Traces origin of messages/files. |
+| **Vulnerability Scans** | Finds missing controls, misconfigs, exposed services. | Proactive detection before attacker exploits. |
+| **Automated Reports** | Prebuilt SIEM reports. | Saves time, but humans must interpret. |
+| **Dashboards** | Real-time summary view. | Best for live monitoring, not historical analysis. |
+| **Packet Captures (PCAP)** | Raw packet data, often Wireshark. | Troubleshoot unknown traffic, verify filtering. |
+
+---
+
+## Exam Tip: Reading Logs
+
+### Firewall log
+
+DENY TCP 203.0.113.50:443 → 10.0.0.5:3389
+
+- Outbound traffic from server → RDP (3389). Likely malware.
+
+### IDS log
+
+[ALERT] SQL Injection attempt from 192.168.1.10 to 10.0.0.25
+
+- Attacker IP is inside (insider threat).
+
+### Authentication log
+
+Failed login attempt - user: admin from 10.0.0.77
+
+- Brute force suspected.
+
+👉 Exam questions will often ask **“what is the MOST likely source of this log?”** or **“which log would you check to confirm this?”**
+
+---
+
+## 🔎 Big Picture
+- **Logs are the breadcrumbs.**  
+  - IR tells you **what happened**.  
+  - Forensics proves **who, when, how**.  
+  - Logs are the **raw evidence** that tie it all together.  
+
+- Security+ focus:  
+  - Know **which log/source** is appropriate.  
+  - Recognize **suspicious entries**.  
+  - Understand **how to correlate multiple logs** in SIEM.  
