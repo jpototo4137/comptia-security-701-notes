@@ -220,4 +220,93 @@ If it’s “security alerts auto-handled and tracked” → SOAR.
   - Free humans for analysis, not repetitive work
  
 
+# 4.8 Incident Response  
 
+## Incident Response Process (NIST SP 800-61)  
+
+1. **Preparation**  
+   - Policies, plans, playbooks, tools  
+   - Training staff for incidents  
+
+2. **Detection & Analysis**  
+   - Identify suspicious activity (logs, alerts, anomalies)  
+   - Confirm whether it’s an actual incident  
+
+3. **Containment, Eradication & Recovery**  
+   - **Containment**: prevent spread (segmentation, disable accounts)  
+   - **Eradication**: remove malware, disable breached accounts, fix vulnerabilities  
+   - **Recovery**: restore systems, rebuild from clean backups  
+
+4. **Lessons Learned**  
+   - Post-incident review  
+   - What went wrong, what worked well  
+   - Update training & playbooks  
+
+---
+
+## Incident Planning  
+
+| Concept              | Description | Example | Exam Tip |
+|----------------------|-------------|---------|----------|
+| **Training** | Staff must be prepared to follow IR plan | Phishing awareness, incident playbooks | Expect scenario: *“Which step ensures staff knows what to do during IR?”* |
+| **Tabletop Exercise** | Discussion-based, walk through response | “What if ransomware hit our file server?” | Low cost, good for logistics |
+| **Simulation** | Hands-on, real-time mock attack | Red team vs Blue team exercise | More realistic, resource heavy |
+| **Root Cause Analysis** | Identify *true* cause of incident | Patch missing → exploit occurred | Exam Q: “What analysis identifies ultimate cause?” |
+| **Threat Hunting** | Proactive search for attackers | Look for unusual logins, beaconing | Needed because threat intel is **reactive** |
+
+---
+
+## Digital Forensics  
+
+**Goal:** Collect, preserve, and analyze evidence from incidents  
+
+### Core Principles  
+- **RFC 3227** – Evidence Collection best practices  
+- **Process:** Acquisition → Analysis → Reporting  
+
+### Key Forensic Concepts  
+
+| Term | Description | Example | Exam Tip |
+|------|-------------|---------|----------|
+| **Legal Hold** | Preserve data for litigation, initiated by legal | Custodian told not to delete emails | Triggered by legal counsel |
+| **Chain of Custody** | Document evidence handling to maintain integrity | Hashing a hard drive before transfer | Integrity check, no tampering |
+| **Acquisition** | Collect evidence (disk, RAM, logs, snapshots) | Capture volatile memory first | Order of volatility is exam favorite |
+| **Preservation** | Secure storage and handling of evidence | Sealed and tagged evidence drive | Prevents loss or corruption |
+| **Reporting** | Summarize findings, explain methodology | IR summary for management | Must be clear and defensible |
+| **E-Discovery** | Legal process to collect/review electronic docs | Search emails in fraud case | Often paired with forensics |
+
+---
+
+## Quick Comparisons  
+
+### Tabletop vs Simulation  
+
+| Type | Approach | Cost | Use Case |
+|------|----------|------|----------|
+| **Tabletop** | Discussion, “what-if” scenarios | Low | Plan review & logistics |
+| **Simulation** | Realistic, hands-on attack | High | Full readiness test |
+
+---
+
+### Legal Hold vs Chain of Custody  
+
+| Concept | Purpose | Who Initiates | Exam Keyword |
+|---------|---------|---------------|--------------|
+| **Legal Hold** | Preserve data for legal reasons | Legal Counsel | Litigation trigger |
+| **Chain of Custody** | Maintain integrity of evidence | Security/Forensic Team | Integrity, tampering |
+
+---
+
+### Order of Volatility (Exam Must-Know)  
+1. CPU registers, cache  
+2. RAM  
+3. Network traffic  
+4. Disk  
+5. Backups/archives  
+
+---
+
+**Exam Angle:**  
+- Questions will often ask: *“What’s the FIRST step after detecting malware?”* → **Containment**  
+- Or: *“Which evidence should be collected first?”* → **RAM (order of volatility)**  
+- Or: *“Legal team requires preservation of data for court, what’s this called?”* → **Legal Hold**  
