@@ -26,7 +26,8 @@
   - DNS → UDP/53  
   - NTP → UDP/123  
 
-### 🔑 Frequently Asked Ports (Exam Focus)
+#### Frequently Asked Ports (Exam Focus)
+
 | **Service**         | **Port (TCP/UDP)** | **Notes** |
 |----------------------|--------------------|-----------|
 | **FTP (control/data)** | 21 (control), 20 (data) | Insecure → use SFTP/FTPS |
