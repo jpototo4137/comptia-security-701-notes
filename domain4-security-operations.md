@@ -135,7 +135,7 @@
 
 ## Mobile Solutions
 
-### Mobile Device Management (MDM)
+### Mobile Device Management (MDM) - policy
 - Centralized mgmt of org/personal devices  
 - Set policies on apps, data, camera  
 - Control remote devices  
