@@ -105,3 +105,27 @@ Tip: Responsibility shifts **more to the CSP** as you go from IaaS → SaaS.
 	•	Required by compliance (PCI DSS, HIPAA).
 	•	Rules of engagement define scope.
 	•	Risks: may cause DoS/data loss.
+
+
+#### 4.4 Security Monitoring
+ 
+| **Name**              | **Category**         | **Notes** |
+|------------------------|----------------------|-----------|
+| **SCAP**              | Framework/Standard   | NIST-managed automation/compliance |
+| **Benchmarks (CIS)**  | Framework/Standard   | Baseline best practices |
+| **Agents vs Agentless** | Concept            | Data collection approach |
+| **Log aggregation / quarantine** | Concept  | Monitoring activities |
+| **SIEM**              | Tool/System          | Collects, correlates, alerts, forensics |
+| **DLP**               | Tool/System          | Prevents sensitive data leaks |
+| **Antivirus/Anti-malware** | Tool/Software   | Detects and removes malware |
+| **Vulnerability scanner** | Tool/System      | Detects flaws, not exploitation |
+| **SNMP**              | Protocol             | Device monitoring (MIB/OIDs, polling on UDP/161) |
+| **SNMP Traps**        | Protocol Function    | Device-initiated alerts (UDP/162) |
+| **NetFlow**           | Protocol/Standard    | Collects traffic flow metadata (probe/collector) |
+
+
+	•	If they ask about endpoint compliance monitoring → think agent/agentless, SCAP.
+	•	If they ask about log aggregation/correlation → think SIEM.
+	•	If they ask about network device stats → think SNMP / SNMP traps.
+	•	If they ask about network traffic patterns → think NetFlow.
+	•	If they ask about preventing data leaving → think DLP.
