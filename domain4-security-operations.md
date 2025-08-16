@@ -210,6 +210,39 @@
 | **802.1X**   | NAC, port-based | Used with RADIUS/EAP |
 | **EAP**      | Extensible auth | EAP-TLS common |
 
+
+**Comparison: 802.1X vs RADIUS vs EAP vs NAC vs WPA3**
+
+**Overview**
+
+- **802.1X** → handles port-based authentication (often uses EAP + RADIUS)  
+- **RADIUS** → provides AAA (authentication, authorization, accounting), supports VPN/Wi-Fi  
+- **EAP** → framework for wireless authentication (EAP-TLS, PEAP, etc.)  
+- **NAC** → checks device posture/security, can integrate with 802.1X  
+- **WPA3** → modern Wi-Fi encryption standard (replaces WPA2)  
+
+---
+
+## Detailed Comparison
+
+| **Term** | **What it is** | **When to Choose (Exam Keyword / Scenario)** |
+|----------|----------------|----------------------------------------------|
+| **802.1X** | IEEE **port-based authentication standard**. Controls access to LAN/WLAN at the switch or AP level. | **Keyword:** “port-based authentication”, “controls access before network connection”. <br>Example: Preventing rogue devices from joining Wi-Fi/LAN. |
+| **RADIUS** | Authentication server/protocol. Centralizes **AAA** (Authentication, Authorization, Accounting). Often backs **802.1X**. | **Keyword:** “centralized authentication”, “remote access”, “VPN or Wi-Fi auth server”. |
+| **EAP** | Framework for many wireless authentication methods (EAP-TLS, PEAP, etc.). Works **inside 802.1X**. | **Keyword:** “wireless authentication method”, “certificate-based login”, “WPA2/WPA3-Enterprise”. |
+| **NAC** | Enforces security posture **before granting network access** (check patch level, AV, compliance). Can use 802.1X. | **Keyword:** “health check before network access”, “only compliant devices allowed”. |
+| **WPA3** | Wi-Fi security standard. Improves WPA2 (stronger encryption, SAE handshake). | **Keyword:** “Wi-Fi encryption”, “latest wireless security”, “replace WPA2”. |
+
+---
+
+How They Relate
+
+- **802.1X** = the standard (door guard)
+- **EAP** = the method of proving identity (ID card)
+- **RADIUS** = the server that validates the ID (security desk)
+- **NAC** = checks if you’re healthy & compliant before entry (health screening)  
+- **WPA3** = ensures your wireless traffic is safe once you’re inside (encrypted hallway)
+
 ---
 
 ## Application Security
@@ -242,45 +275,37 @@
 
 ---
 
-# Exam Triggers Quick Recall Sheet
+**Code Signing vs Input Validation vs SAST**
 
-### Controls, Baselines
-- **Control** → high-level policy, not tech-specific  
-- **Benchmark** → recommended settings/standards  
-- **Baseline** → actual implementation of benchmark  
+Overview
 
-### Hardening
-- **Default config / default passwords** → insecure, must change  
-- **Air gap** → ICS/SCADA isolation  
-- **Geofencing** → mobile device can’t leave premises  
-- **Least privilege / IAM** → cloud or server security  
-- **Remove unnecessary software** → workstation hardening  
-- **Firmware updates** → embedded, IoT, routers  
-- **Minimal services** → RTOS  
+- **Code Signing** → Ensures code integrity & authenticity using **digital signatures**.  
+- **Input Validation** → Prevents malicious/invalid inputs from exploiting the app.  
+- **SAST (Static Application Security Testing)** → Analyzes **source code** for vulnerabilities before execution.  
 
-### Wireless & Mobile
-- **WPA2** → brute-force/dictionary vulnerable  
-- **WPA3** → SAE (dragonfly handshake), GCMP cipher, no brute force  
-- **PSK** → everyone shares one password  
-- **Enterprise (802.1X)** → per-user auth, backed by RADIUS  
-- **MIC** → message integrity check (wireless)  
-- **BYOD** → hardest to secure  
-- **COPE** → org-owned, user can use personally  
-- **CYOD** → user chooses, org still controls  
-- **MDM** → centralized management  
-- **Public Wi-Fi** → sniffing, on-path attack  
-- **Bluetooth** → pairing risk, PAN exploitation  
+---
 
-### AAA & Protocols
-- **AAA** → Identify → Authenticate → Authorize → Account  
-- **RADIUS** → centralized AAA, VPN, 802.1X  
-- **802.1X** → NAC, port-based control  
-- **EAP** → flexible framework (TLS, TTLS, etc)  
+**Detailed Comparison**
 
-### Application Security
-- **Input validation** → prevents SQL injection  
-- **Secure cookies** → HTTPS-only, no sensitive info  
-- **SAST** → static code analysis, false positives possible  
-- **Code signing** → integrity/authentication, asymmetric crypto  
-- **Sandboxing** → isolate apps/resources  
-- **Monitoring logs** → detect anomalies & attacks  
+| **Concept** | **What it is** | **Mitigates / Counters** | **When to Use / Exam Keywords** |
+|-------------|----------------|---------------------------|----------------------------------|
+| **Code Signing** | Uses **digital signatures** to verify code comes from a trusted source and was not tampered with. | Counteracts **malware-injected software**, **tampered apps**, and **supply chain attacks**. | **Keyword:** “software authenticity”, “trusted vendor”, “prevent tampering”. <br>Example: Ensuring an app downloaded hasn’t been altered with malicious code. |
+| **Input Validation** | Validates & sanitizes **user inputs** before processing to block injection attacks, XSS, buffer overflows. | Mitigates **SQL injection**, **cross-site scripting (XSS)**, **buffer overflow**, and **command injection**. | **Keyword:** “prevent malformed input”, “sanitize user input”, “defend against SQL injection/XSS”. |
+| **SAST** | **Static code analysis** — scans **source code** or binaries without executing them, to find vulnerabilities early in the SDLC. | Counters **logic flaws**, **hardcoded credentials**, **unsafe functions**, and **potential injection points**. | **Keyword:** “analyze source code”, “before runtime”, “developer IDE or CI/CD pipeline”. |
+
+---
+
+How They Relate
+
+- **Code Signing** = Trust the *origin* of code (is it from who it says it’s from?).  
+- **Input Validation** = Protect the *execution* of the app from bad/malicious inputs.  
+- **SAST** = Detect flaws *inside the code itself* before it runs.  
+
+---
+
+Exam Tip
+
+- If the question mentions **trusted software vendor / tampering prevention** → **Code Signing**  
+- If it mentions **SQL injection, XSS, malformed data** → **Input Validation**  
+- If it mentions **static analysis, before runtime, scanning source code** → **SAST**  
+
