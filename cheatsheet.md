@@ -272,4 +272,94 @@ Tip: Responsibility shifts **more to the CSP** as you go from IaaS → SaaS.
 - **RPO = data loss tolerance**  
 - **RTO = downtime tolerance**  
 - **MTBF = reliability**  
-- **MTTR = repair speed**  
+- **MTTR = repair speed**
+
+
+# Domain 5.3 – Key Terms & Exam Indicators
+
+## Vendor Assessment Methods
+
+| Term | Definition | Scenario/Indicator (Exam) | Keywords/Triggers |
+|------|-------------|---------------------------|-------------------|
+| **Pentest** | Simulated cyberattack against vendor system | You need to verify vendor security from the **outside attacker’s view** | "Simulate attack", "test security posture" |
+| **Right-to-Audit Clause** | Contract clause allowing you to audit vendor’s practices | Included in contracts for oversight | "Contract clause", "audit vendor" |
+| **Evidence of Internal Audits** | Vendor provides proof they audit themselves | You ask vendor for logs/reports | "Proof of audits", "internal security checks" |
+| **Independent Assessments** | External auditor reviews vendor | CSP or vendor provides **SOC 2 / ISO 27001** | "External audit", "third-party report" |
+| **Supply Chain Analysis** | Check security of **vendors + subcontractors** | Risks may come from 3rd-party suppliers | "Subcontractor", "ecosystem", "vendor chain" |
+
+---
+
+## Right-to-Audit (Detailed)
+
+- Customers may **audit vendors** via **contract clauses**.  
+- **BUT**: You cannot audit **public CSPs** (AWS, Azure, GCP). Instead → use **independent attestation reports**.  
+
+**Exam keywords**:  
+- "Right-to-audit clause" = **private vendors**.  
+- "Cloud vendor" = **look for SOC 2 / ISO 27001**.  
+
+---
+
+## Supply Chain Analysis – Exam Indicators
+
+| Method | Definition | Exam Trigger |
+|--------|-------------|--------------|
+| **On-Site Assessment** | Visit vendor, interview staff | "Visit facility", "observe processes" |
+| **Document Exchange & Review** | Review policies/docs | "Review vendor policies", "doc exchange" |
+| **Policy Review** | Request official security procedures | "Review security policies" |
+| **Third-Party Audit** | External audit firm provides report | "Independent verification", "SOC 2 / ISO" |
+
+---
+
+## Vendor Selection
+
+### Due Diligence (Easy Analogy)
+- **Why is it called this?** → "Due" = what you **must** do. "Diligence" = careful research.  
+- **Definition**: Research/checks you do **before signing contract**.  
+- **Scenario**: Before hiring vendor, you check their **financials, reputation, compliance, security**.  
+- **Exam keyword**: "Before signing", "review vendor financial health", "vendor viability".  
+
+### Due Care
+- **Actions taken** after due diligence.  
+- Example: If due diligence shows weak security → due care = adding contract clauses or rejecting them.  
+
+---
+
+### Conflicts of Interest
+- **Financial**: Employee has stake in vendor (biased decision).  
+- **Bribes/Kickbacks**: Inflated contracts, relaxed quality standards.  
+- **Professional**: Pre-existing personal ties or "revolving door" employment.  
+
+**Exam keywords**:  
+- "Employee’s brother owns vendor" → **Conflict of Interest**.  
+- "Former employee joins vendor" → **Revolving door**.  
+
+---
+
+## Agreement Types
+
+| Agreement | Definition | Exam Scenario/Indicator | Keywords |
+|-----------|-------------|-------------------------|----------|
+| **SLA (Service-Level Agreement)** | Contract defining uptime/downtime, penalties | Vendor promises uptime or response times | "Downtime", "penalties", "performance expectations" |
+| **MOU (Memorandum of Understanding)** | Non-binding formal agreement | Two parties intend to cooperate but not legally bound | "Intent", "not legally enforceable" |
+| **MOA (Memorandum of Agreement)** | Binding contract (legal) | Legal obligations, enforceable | "Legal agreement", "binding contract" |
+| **MSA (Master Service Agreement)** | Governs overall, ongoing vendor relationship | Used with vendors you’ll work with repeatedly | "Ongoing", "general terms", "before SOW" |
+| **SOW (Statement of Work)** | Specific deliverables/project agreement | Defines tasks, timelines, deliverables | "Specific project", "after MSA" |
+| **NDA (Non-Disclosure Agreement)** | Protects confidential info | Vendor/employee must not share secrets | "Confidentiality", "trade secrets" |
+| **BPA (Business Partnership Agreement)** | Partnership for profit between entities | Business venture partnerships | "Profit-sharing", "partnership" |
+
+---
+
+# ✨ Big Picture (Exam Tips)
+- **Due diligence** → before contract (research).  
+- **Due care** → after contract (actions).  
+- **Right-to-audit** → vendors, **not CSPs**.  
+- **Supply chain** → always think of **subcontractor risk**.  
+- Agreement type questions are often **keyword traps**:  
+  - SLA = uptime/downtime  
+  - MOU = informal, not binding  
+  - MOA = binding  
+  - MSA = ongoing  
+  - SOW = specific project  
+  - NDA = confidentiality  
+  - BPA = partnership/profit  
