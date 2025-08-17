@@ -565,3 +565,121 @@ Identifies **mission-critical functions**, **downtime limits**, and **dependenci
   - Port scans, ping sweeps, vuln scanners, social engineering.  
 - Requires **written, signed contract** (legality!).  
 - Exam keyword: **“direct probing,” “can be detected.”**
+
+# Domain 5.6 – Security Awareness Practices
+
+> **Purpose:** Build a security-minded workforce to reduce risks from social engineering, insider threats, and human error.  
+> Exam focus = recognizing attack indicators + knowing training/response methods.
+
+---
+
+## Social Engineering
+
+### Principles of Social Engineering Success
+- **Authority** → "I’m from IT/CEO approved."  
+- **Intimidation** → Threat of negative outcome.  
+- **Consensus (Social Proof)** → "Others already did this."  
+- **Scarcity** → "Offer expires today."  
+- **Familiarity (Liking)** → Pretends to know you.  
+- **Trust** → Uses insider knowledge.  
+- **Urgency** → "Act now, no time to verify."  
+
+**Exam keyword:** "psychological manipulation"  
+
+---
+
+### Types of Social Engineering
+
+#### Physical
+- **Tailgating** → Unauthorized entry by following employee.  
+- **Shoulder Surfing** → Stealing creds by looking over shoulder.  
+- **Dumpster Diving** → Extracting info from trash.  
+- **Elicitation** → Extract info via casual conversation.  
+
+#### Virtual
+- **Phishing** → Mass deceptive emails.  
+- **Spear Phishing** → Targeted group/individual.  
+- **Whaling** → High-level executives.  
+- **Vishing** → Phone-based scam.  
+- **Smishing** → SMS/text-based phishing.  
+- **Hoax** → False warning to trick user.  
+- **Watering Hole Attack** → Compromise a site visited by target.  
+- **Pharming** → DNS redirection to fake sites.  
+
+**Exam indicators:** suspicious email, urgency, misspellings, unusual source.  
+
+---
+
+### Spam & SPIM
+- **Spam:** Junk email → defend with filters.  
+- **SPIM:** Spam over instant messaging → avoid public IDs, use cryptic usernames.  
+
+---
+
+### Mitigating Phishing
+- **Simulated Campaigns** → Test employees regularly.  
+- **Recognition Training** → Red flags = generic greeting, typos, urgency, attachments.  
+- **Clear Reporting Procedures** → How to report without compromising.  
+
+---
+
+## Anomalous Behaviour Recognition
+
+### Risky Behaviour
+- Downloading from unknown sites.  
+- Clicking suspicious links.  
+- Sharing passwords.  
+- Leaving devices unattended.  
+
+### Unexpected Behaviour
+- Sudden spike in failed logins.  
+- Accessing sensitive data outside job role.  
+- Unusual working hours.  
+- Large data transfers to personal devices.  
+
+### Unintentional Behaviour
+- Weak/reused passwords.  
+- Falling for phishing & entering creds.  
+- Leaving sensitive docs uncollected.  
+- Oversharing confidential data.  
+
+**Exam angle:** Logs showing "failed logins," "odd hours," "large transfers" → awareness issue.  
+
+---
+
+## User Guidance & Training
+
+- **Policies/Handbooks:** Reporting suspicious messages, phishing guidance.  
+- **Situational Awareness:** Stay updated on evolving threats.  
+- **Insider Threat Awareness:** Recognize disgruntled coworker risks.  
+- **Password Management:** No reuse, encourage password managers.  
+- **Removable Media Risks:** Only authorized USBs, encryption required.  
+- **OpSec (Operational Security):** Avoid public Wi-Fi, use VPN.  
+- **Hybrid/Remote Security:** Secure home Wi-Fi, avoid personal devices for work data.  
+- **Social Engineering Training:** Cover "7 principles of SE."  
+
+---
+
+## Reporting & Monitoring
+
+- **Initial Assessment:** Surveys, tests to measure baseline awareness.  
+- **Recurring Training:** Regular sessions, updated content.  
+- **Continuous Monitoring:** Track employee improvement, address weak areas.  
+
+---
+
+## Training Program Development & Execution
+
+- **Tailored Content:** Match org’s risks & industry.  
+- **Varied Methods:** Online modules, in-person, interactive exercises.  
+- **Execution:**  
+  - Mandatory for all employees.  
+  - Hybrid training (onsite + remote).  
+  - Promote awareness program across the org.  
+
+---
+
+**Exam Focus:**
+- Keywords like "tailgating," "dumpster diving," "urgency in email" → social engineering.  
+- Logs showing unusual login times/data exfiltration → awareness/training gap.  
+- Answer choices mentioning "training," "policies," "reporting" usually → mitigation.
