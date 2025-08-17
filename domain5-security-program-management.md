@@ -399,3 +399,100 @@ Identifies **mission-critical functions**, **downtime limits**, and **dependenci
   - **You can’t audit CSP directly** → rely on 3rd-party attestation.
   - **Due diligence vs. due care**.
   - **Conflict of interest scenarios** (e.g., employee’s brother owns the vendor).
+ 
+
+# Domain 5.4 – Effective Security Compliance
+
+---
+
+## Compliance Reporting
+
+- **Internal Reporting**
+  - Informing leadership & internal stakeholders
+  - Keeps executives aware of risks (they are ultimately accountable)
+
+- **External Reporting**
+  - Regulatory bodies / auditors (mandatory per laws/regulations)
+  - Examples: **GDPR, PCI-DSS, HIPAA**
+  - Reporting may be annual, quarterly, or "on-request"
+
+---
+
+## Consequences of Non-Compliance
+
+- **Fines** – monetary penalties, may escalate to lawsuits  
+- **Sanctions** – civil or criminal charges  
+- **Reputational Damage** – long-lasting trust loss  
+- **Loss of License** – inability to operate legally  
+- **Contractual Impacts** – penalties or termination of agreements  
+
+---
+
+## Compliance Monitoring
+
+- **Due Diligence** – assess vendors, systems, data handling practices  
+- **Due Care** – implement controls/mitigations to reduce identified risks  
+- **Attestation & Acknowledgement** – formal confirmation from employees/vendors that they follow policies  
+- **Audits**
+  - Internal – proactive, fix issues before external checks  
+  - External – regulators or third parties  
+- **Automation**
+  - SIEM & SOAR for monitoring, reporting, and incident response  
+  - Helps standardize compliance evidence  
+
+---
+
+## Privacy vs. Confidentiality
+
+- **Privacy** – individual’s right to control personal information  
+- **Confidentiality** – organization’s duty to protect data from unauthorized access  
+
+---
+
+## Privacy Frameworks
+
+- **United States**
+  - Fourth Amendment → limits gov’t search  
+  - SCA (Stored Communications Act, 1986)  
+  - Sector-specific (HIPAA, GLBA, etc.)
+
+- **European Union**
+  - **GDPR** – applies to all organizations handling EU citizens’ data  
+  - Global impact → affects US companies with EU customers  
+
+---
+
+## Key Legal Concepts
+
+- **Data Subject** – person whose personal data is collected  
+- **Controller** – entity determining purpose/means of processing  
+- **Processor** – processes data on behalf of controller  
+- **Ownership** – ultimate control/authority over data  
+- **Data Inventory & Retention**
+  - Keep detailed record of personal data  
+  - Apply retention policies → securely dispose of data after use  
+- **Right to be Forgotten**
+  - Individuals can request deletion of personal data  
+
+---
+
+## Business Terms & Exam Indicators
+
+- **Attestation** – signed proof of compliance ("we did this")  
+- **Acknowledgement** – acceptance of responsibility ("I will follow policy")  
+- **Evidence in Logs** – regulators may require:
+  - Access logs (who viewed data, when)  
+  - Audit trails (system changes, admin actions)  
+  - Retention proof (data securely deleted per policy)  
+
+---
+
+## Exam Tips
+
+- If you see **"proactive check before regulator arrives"** → Internal Audit  
+- If you see **"legal/global data protection"** → GDPR  
+- If you see **"ownership vs access"** → Privacy = people, Confidentiality = data  
+- If you see **"right to be forgotten"** → GDPR, EU context  
+- If you see **"continuous monitoring with SIEM"** → Automated compliance evidence  
+
+---
