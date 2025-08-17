@@ -104,7 +104,39 @@ Effective governance = **policies, standards, guidelines, and procedures** align
 
 - **Data Processor** (GDPR) – processes data on behalf of controller.  
 
-- **Data Subject** (GDPR) – the individual (PII owner).  
+- **Data Subject** (GDPR) – the individual (PII owner)
+
+---
+
+**Data Roles & Responsibilities**
+
+| Role                | Responsibility                                                                 | Exam Keywords / Indicators |
+|---------------------|-------------------------------------------------------------------------------|----------------------------|
+| **Data Owner**      | - Legal rights & ultimate responsibility for data<br>- Defines classification & access rules<br>- Usually senior management | *Cannot delegate full responsibility*, "legal control", "senior mgmt" |
+| **Data Controller** | - Determines why/how data is processed<br>- Ensures compliance (e.g., GDPR)<br>- Responsible party for processing activities | "Determines purpose of processing", "responsible for data" |
+| **Data Processor**  | - Processes data **on behalf of controller**<br>- Does not own/control data<br>- Usually vendor/3rd party (cloud provider, payroll service) | "3rd party", "acts on behalf", "processes only as instructed" |
+| **Data Custodian**  | - Day-to-day safe custody, storage, transport<br>- Implements technical controls (CIA, backups, logs, permissions)<br>- Often IT staff | *Day-to-day operations*, "technical controls", "storage/backup", "admin staff" |
+| **Data Steward**    | - Ensures data quality, accuracy, context<br>- Enforces business rules for data use<br>- Bridges gap between owner and custodian | "Business rules", "data quality", "ensures meaning understood" |
+| **Data Subject**    | - The individual whose personal data is collected & processed<br>- Protected by privacy laws (e.g., GDPR, CCPA) | "Person identified by data", "PII", "user/customer" |
+
+
+## Exam Triggers / Quick Tips
+- **Owner vs Custodian**:  
+  - *Owner = authority*  
+  - *Custodian = implementation*  
+  - If question says *"day-to-day"* → **Custodian**  
+  - If question says *"senior management"* or *"legal responsibility"* → **Owner**
+
+- **Controller vs Processor (GDPR focus)**:  
+  - *Controller = decides purpose*  
+  - *Processor = acts on behalf*  
+
+- **Steward vs Custodian**:  
+  - *Steward = business rules + meaning*  
+  - *Custodian = technical storage + enforcement*  
+
+- **Data Subject**:  
+  - If the question mentions *"individual rights, PII, privacy requests"* → **Data Subject**
 
 ---
 
