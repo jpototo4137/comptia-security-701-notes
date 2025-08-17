@@ -186,3 +186,90 @@ Tip: Responsibility shifts **more to the CSP** as you go from IaaS → SaaS.
 | **ISO 27001**     | ISMS (Info Sec Management System)                |
 | **FIPS 140-2/3**  | Federal-level encryption requirements            |
 | **NFPA/ANSI/ISO** | Physical security (access badges, HVAC, cameras) |
+
+
+# Risk Management Exam Key Terms & Triggers
+
+---
+
+## Risk Response Techniques
+
+| Term        | Definition / Use                                                                 | Exam Keywords / Indicators | Scenario |
+|-------------|----------------------------------------------------------------------------------|----------------------------|----------|
+| **Mitigate** | Implement controls to reduce risk (but some residual risk remains)              | "countermeasure", "reduce risk", "implement control" | Install firewall, patch system |
+| **Transfer** | Shift risk to third party                                                       | "insurance", "outsourcing", "3rd party" | Buy cyber insurance |
+| **Accept**   | Do nothing, acknowledge risk                                                    | "business decision", "do nothing", "document acceptance" | Small risk cheaper to accept |
+| **Avoid**    | Eliminate activity causing risk                                                 | "discontinue", "remove exposure", "do not perform" | Don’t host in hurricane zone |
+
+---
+
+## Risk Assessment Types
+
+| Term         | Definition / Use                                              | Exam Keywords / Indicators | Scenario |
+|--------------|---------------------------------------------------------------|----------------------------|----------|
+| **Ad hoc**   | Informal, one-time, triggered by event                        | "after incident", "informal", "specific event" | Quick check after new malware |
+| **Recurring**| Scheduled periodically                                        | "quarterly", "annual", "periodic review" | Yearly risk assessment |
+| **One-time** | Formal, single assessment (management request)                | "management request", "formal one-off" | Before M&A deal |
+| **Continuous**| Automated, ongoing                                           | "automated scanning", "real-time monitoring" | Continuous vulnerability scans |
+
+---
+
+## Quantitative Risk Terms
+
+| Term  | Definition / Formula                                                 | Exam Keywords / Indicators | Scenario |
+|-------|----------------------------------------------------------------------|----------------------------|----------|
+| **EF (Exposure Factor)** | % of asset value lost in event                     | "% loss", "percentage damage" | Fire causes 40% damage |
+| **SLE (Single Loss Expectancy)** | Expected loss for **one incident** <br> SLE = AV × EF | "single occurrence", "one incident" | $100k asset, 30% EF → $30k loss |
+| **ARO (Annualized Rate of Occurrence)** | Expected frequency/year | "per year", "once every 5 yrs (0.2)" | Earthquake once in 10 yrs → 0.1 |
+| **ALE (Annualized Loss Expectancy)** | Yearly expected loss <br> ALE = SLE × ARO | "annual cost", "expected yearly loss" | $30k SLE × 0.5 ARO = $15k/year |
+
+---
+
+## Risk Register Concepts
+
+| Term             | Definition / Use                                          | Exam Keywords / Indicators | Scenario |
+|------------------|-----------------------------------------------------------|----------------------------|----------|
+| **KRI (Key Risk Indicator)** | Metric showing change in risk level            | "early warning", "measurable signal" | Increase in failed logins |
+| **Risk Owner**   | Person accountable for specific risk                      | "assigned responsibility", "accountability" | IT manager owns phishing risk |
+| **Risk Threshold** | Point at which action must be taken                      | "trigger point", "when tolerance exceeded" | Risk score > 8 requires action |
+
+---
+
+## Risk Appetite vs. Risk Tolerance
+
+| Term              | Definition / Use                                          | Exam Keywords / Indicators | Scenario |
+|-------------------|-----------------------------------------------------------|----------------------------|----------|
+| **Risk Appetite** | How much risk the org is **willing** to take              | "willing to accept", "strategic level" | Startup takes high risk in new tech |
+| **Risk Tolerance**| Org’s **ability** to absorb losses                        | "capacity", "financial cushion", "stability" | Large bank can handle more risk due to cash reserves |
+
+---
+
+## Business Impact Analysis (BIA) Terms
+
+| Term  | Definition / Use                                                     | Exam Keywords / Indicators | Scenario |
+|-------|----------------------------------------------------------------------|----------------------------|----------|
+| **RPO (Recovery Point Objective)** | Max acceptable **data loss** (time)     | "last backup", "data age", "acceptable data loss" | Backups every 6 hrs → 6 hr RPO |
+| **RTO (Recovery Time Objective)**  | Max time system can be **down**         | "acceptable downtime", "restore within X hrs" | Must restore within 4 hrs |
+| **MTBF (Mean Time Between Failures)** | Average **operational uptime** before failure | "reliability", "expected life" | Hard drive lasts 5 yrs |
+| **MTTR (Mean Time to Repair)** | Avg time to fix/restore after failure      | "repair time", "restore service" | Replace failed router in 2 hrs |
+
+---
+
+# ✅ Quick Exam Tips
+
+- If question mentions **installing, patching, reducing risk** → **Mitigate**  
+- If **insurance, outsourcing, contracts** → **Transfer**  
+- If **document and accept, low risk** → **Accept**  
+- If **don’t do activity at all** → **Avoid**  
+
+- **Ad hoc** = after specific event  
+- **Recurring** = scheduled (quarterly/annual)  
+- **Continuous** = automated scanning  
+
+- **SLE = AV × EF**  
+- **ALE = SLE × ARO**  
+
+- **RPO = data loss tolerance**  
+- **RTO = downtime tolerance**  
+- **MTBF = reliability**  
+- **MTTR = repair speed**  
