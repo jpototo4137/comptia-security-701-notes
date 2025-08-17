@@ -154,3 +154,14 @@ Tip: Responsibility shifts **more to the CSP** as you go from IaaS → SaaS.
 | **NTP**              | 123 UDP | Time sync |
 | **Kerberos**         | 88 | Authentication protocol |
 
+
+| **Role**                   | **Key Functions**                                            |
+| -------------------------- | ------------------------------------------------------------ |
+| **Data Owner**             | Final authority, legally responsible, often exec-level       |
+| **Data Steward**           | Ensures data meaning, rules, and usage are known             |
+| **Custodian**              | IT role, implements protection (CIA, logs, backups) → *day-to-day* handler |
+| **Data Controller (GDPR)** | Decides how/why data is processed                            |
+| **Data Processor (GDPR)**  | Processes data on behalf of controller                       |
+| **Data Subject (GDPR)**    | The individual whose data is collected (e.g., customer)      |
+
+🔎 *“Day-to-day” = custodian* (EXAM!)
