@@ -113,3 +113,130 @@ Effective governance = **policies, standards, guidelines, and procedures** align
 - “Day-to-day” = custodian/steward.  
 - Governance = alignment of **business risk, compliance, and security objectives**.  
 - Expect questions testing your ability to **map a scenario (policy/procedure violation)** to the correct governance element.
+
+# Domain 5 — 5.2 Risk Management
+
+## Overview
+Risk management is the **process of identifying, analyzing, evaluating, and responding to risks** that could affect an organization’s assets and operations.  
+It includes **risk identification, assessment, analysis, response, and reporting**.
+
+---
+
+## 1. Risk Identification
+Identify threats, vulnerabilities, and assets.
+
+- **Threats**: malicious actors, natural disasters, insider misuse
+- **Vulnerabilities**: weak configs, unpatched systems, poor monitoring
+- **Assets**: data, systems, infrastructure, reputation
+
+---
+
+## 2. Risk Response Techniques
+- **Mitigate** → reduce risk via controls (firewalls, patches, training)
+- **Transfer** → insurance, outsourcing to 3rd party
+- **Accept** → do nothing, live with risk
+- **Avoid** → stop risky activity entirely
+
+---
+
+## 3. Risk Assessment
+Broader process of **identifying, analyzing, evaluating, and prioritizing risks**.
+
+### Types of Assessments
+- **Ad hoc** → informal, one-time (specific event)
+- **Recurring** → periodic (quarterly, annually)
+- **One-time (formal)** → after incident / management request
+- **Continuous** → automated scans and monitoring
+
+### Risk Assessment vs. Risk Analysis
+| Term            | Focus                                  | Activities                                  |
+|-----------------|----------------------------------------|---------------------------------------------|
+| **Risk Assessment** | Broader process across lifecycle       | Identify → Analyze → Prioritize → Mitigate   |
+| **Risk Analysis**   | Detailed examination of specific risks | Evaluate **likelihood** + **impact**        |
+
+---
+
+## 4. Risk Analysis
+
+### Qualitative vs Quantitative
+- **Quantitative**: numeric, $$-based, formulas (objective)
+- **Qualitative**: low/med/high, scoring systems (subjective)
+
+### Key Formulas (Quantitative Risk Analysis)
+- **Exposure Factor (EF)** = % of asset value lost  
+  - Example: $30k loss on $100k asset → EF = 30%
+- **Single Loss Expectancy (SLE)** = AV × EF  
+  - Ex: $100k × 30% = $30k
+- **Annualized Rate of Occurrence (ARO)** = how often/year  
+  - Ex: once every 5 yrs → ARO = 0.2
+- **Annualized Loss Expectancy (ALE)** = SLE × ARO  
+  - Ex: $30k × 0.2 = $6k/year loss
+
+---
+
+## 5. Risk Register
+Tool to **track risks** and their handling.  
+
+**Typical fields:**
+- Risk ID
+- Description
+- Probability
+- Impact
+- Severity
+- Response
+- Owner
+
+### Visual Tools
+- **Risk Matrix** → likelihood × impact (green → red)
+- **Heat Map** → visual severity
+
+### Key Concepts
+- **Key Risk Indicators (KRIs)**: metrics to signal changes
+- **Risk Owners**: accountability assigned
+- **Risk Threshold**: tolerance limit for risks
+
+---
+
+## 6. Risk Tolerance vs Appetite
+- **Tolerance** → ability to absorb risk (financial buffer, resources)
+- **Appetite** → willingness to accept risk
+- **Alignment is critical**: Startups often have **high appetite**; gov/healthcare have **low appetite**.
+
+---
+
+## 7. Risk Management Strategies
+- **Acceptance** → do nothing (Exception = temporary, Exemption = permanent)
+- **Mitigation** → apply safeguards, accept residual risk
+- **Transference** → insurance, outsourcing
+- **Avoidance** → stop risky activity
+
+---
+
+## 8. Risk Reporting
+- Final phase: risks reported with **recommendations**
+- Leadership decides: which risks to accept, mitigate, or transfer
+
+---
+
+## 9. Business Impact Analysis (BIA)
+Identifies **mission-critical functions**, **downtime limits**, and **dependencies**.
+
+### Key Metrics
+- **RPO (Recovery Point Objective)** → max tolerable data loss
+- **RTO (Recovery Time Objective)** → max downtime before unacceptable impact
+- **MTBF (Mean Time Between Failures)** → expected uptime before failure
+- **MTTR (Mean Time To Repair)** → how long to fix/restore
+
+### Supporting Concepts
+- **CBA (Cost-Benefit Analysis)** → compare safeguard costs vs protection
+- **ROI (Return on Investment)** → evaluate effectiveness
+
+---
+
+## 10. Exam Angle
+- Expect log interpretation questions: e.g., given SLE, EF, ARO, compute **ALE**  
+- BIA questions often test differences between **RTO vs RPO**  
+- Watch out for **Exception vs Exemption** trick wording  
+- Heat maps and risk registers show up in **scenario-based** questions  
+
+---
