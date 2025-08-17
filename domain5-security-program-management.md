@@ -272,3 +272,130 @@ Identifies **mission-critical functions**, **downtime limits**, and **dependenci
 - Heat maps and risk registers show up in **scenario-based** questions  
 
 ---
+
+# Domain 5.3 – Security Program Management & Oversight
+
+## Vendor Assessment
+
+**Common Methods**
+- **Penetration Testing** – simulate cyberattacks to test vendor security.
+- **Right-to-Audit Clause** – contract clause allowing audits of vendor practices.
+- **Evidence of Internal Audits** – request proof of vendor’s regular audits.
+- **Independent Assessments** – review reports from external security firms.
+- **Supply Chain Analysis**
+  - Map vendor ecosystem (subcontractors, suppliers).
+  - Ensure vendors are secure, reliable, trustworthy.
+  - Use **periodic attestation** – vendors confirm compliance.
+
+**Strong People & Project Management**
+- Assess vendor viability (not just security team):
+  - Financial statements
+  - Performance history/reputation
+  - Formal reports (e.g., SOC 1)
+
+---
+
+### Right-to-Audit
+- Defines customer rights to investigate vendor’s practices.
+- **Exam tip:** You **cannot audit a CSP** (Microsoft, AWS, Google). Instead, rely on **3rd-party reports (SOC 2, ISO 27001)**.
+
+**Audits may uncover:**
+- Inferior quality/faulty goods  
+- Short shipments  
+- Non-delivery  
+- Kickbacks/gifts/bribes  
+- Fake or unnecessary services  
+
+---
+
+### Supply Chain Analysis
+- **On-Site Assessment** – visit vendor, interview staff.  
+- **Document Exchange & Review** – check processes.  
+- **Policy Review** – request copies of security docs.  
+- **Third-Party Audit** – external, independent check.  
+
+---
+
+## Vendor Selection
+
+### Due Diligence
+- Collect/analyze info before contract.
+- Check:
+  - Financial health
+  - Reputation
+  - Security practices
+  - Regulatory compliance
+
+> **Due diligence** → research phase  
+> **Due care** → actions based on that research  
+
+### Conflicts of Interest
+- **Financial interests** – ownership stakes, bribes, kickbacks.  
+- **Professional relationships** – personal ties or “revolving door” (employee leaves → joins vendor).  
+
+### Information Sharing Risks
+- **Confidentiality breaches** – vendor misuses data.  
+- **Unequal info sharing** – vendor hides limitations → biased decisions.  
+
+---
+
+## Agreement Types
+
+- **SLA (Service-Level Agreement)**
+  - Defines performance expectations (uptime, downtime).
+  - Includes penalties if not met.
+
+- **MOU (Memorandum of Understanding)**
+  - Formal but non-binding.
+  - More formal than handshake, less binding than SLA.
+
+- **MOA (Memorandum of Agreement)**
+  - Binding legal contract.
+  - Different from MOU → enforceable.
+
+- **MSA (Master Service Agreement)**
+  - Governs **overall ongoing relationship**.
+  - Covers general terms, breach notifications, duties.
+  - Comes **before** SOW.
+
+- **SOW (Statement of Work)**
+  - Governs **specific project/deliverable**.
+  - Follows MSA.
+
+- **NDA (Non-Disclosure Agreement)**
+  - Protects company’s confidential info.  
+  - Used with vendors, suppliers, and employees.
+
+- **BPA (Business Partnership Agreement)**
+  - Between businesses joining to make a profit.  
+
+**Exam keywords**:  
+- SLA → uptime/downtime, penalties  
+- MOU → informal agreement, not binding  
+- MOA → binding contract  
+- MSA → ongoing relationship  
+- SOW → specific project work  
+- NDA → confidentiality  
+- BPA → business venture  
+
+---
+
+## Vendor Monitoring
+- Continuous monitoring of vendor security posture.
+- Send periodic **questionnaires** to check practices.
+
+### Rules of Engagement
+- Define test scope, purpose, and boundaries.
+- Clarify expectations and escalation path.
+- Ensure all parties agree on processes before monitoring.  
+
+---
+
+# ✨ Exam Big Picture (Why it Matters)
+- Vendors and supply chains are common **attack surfaces** (e.g., SolarWinds, Target breach).
+- Security teams must ensure **due diligence** (research) + **due care** (actions).
+- Contract types (SLA, MSA, SOW, NDA) = **keyword traps on exam**.
+- Supply chain questions often test whether you recognize:
+  - **You can’t audit CSP directly** → rely on 3rd-party attestation.
+  - **Due diligence vs. due care**.
+  - **Conflict of interest scenarios** (e.g., employee’s brother owns the vendor).
