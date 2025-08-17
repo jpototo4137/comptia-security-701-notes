@@ -496,3 +496,72 @@ Identifies **mission-critical functions**, **downtime limits**, and **dependenci
 - If you see **"continuous monitoring with SIEM"** → Automated compliance evidence  
 
 ---
+
+# Domain 5.5 – Types & Purposes of Audits and Assessments
+
+> **Audit vs. Assessment**  
+> - Audit = like taking the exam (formal, compliance check).  
+> - Assessment = like studying for the exam (informal, improvement-oriented).  
+
+---
+
+## Attestation
+
+**Definition:** Independent verification of compliance, security, or processes.  
+
+### Internal
+- Conducted by **internal auditors** (dedicated team).  
+- Must be **independent** = free to report results without retaliation.  
+- **Compliance Audits:** Ensure adherence to internal policies & procedures.  
+- **Audit Committee:** Reports to board of directors; oversees audit functions.  
+- **Self-Assessments:** Done by staff → identify weaknesses before external checks.  
+
+### External
+- Conducted by **external auditors** (3rd-party).  
+- **Regulatory Audits:** Required by gov/regulators (e.g., **SOX** for public companies).  
+- **Examinations:** Broad reviews (financial, IT, operational).  
+- **Independent Third-Party:** Objective review → adds credibility.  
+
+---
+
+## Penetration Testing
+
+**Purpose:** Simulate cyberattacks to evaluate resilience of systems, networks, and people.  
+
+### Categories
+- **Physical:** Test physical barriers (locks, guards, entry controls).  
+- **Offensive:** Focus on **technical exploitation** (hacking systems).  
+- **Defensive:** Assess effectiveness of existing security controls.  
+- **Integrated:** Combines physical + offensive + defensive.  
+
+### Types
+- **White Box (Known Environment):** Tester has **full info** (e.g., source code, configs).  
+- **Black Box (Unknown):** Tester knows **nothing** (true outsider perspective).  
+- **Gray Box (Partial):** Tester has **limited info** (like an insider with restricted access).  
+
+**Exam Keywords:**  
+- White box = “full visibility”  
+- Black box = “blind”  
+- Gray box = “limited info”  
+
+### Rules of Engagement
+- Defines **scope, purpose, timing, and boundaries** of test.  
+- Prevents accidental disruptions.  
+- Everyone (security team, vendor, management) must be aware.  
+
+---
+
+## Reconnaissance in Pentesting
+
+### Passive Recon
+- **No direct interaction** with target (undetectable).  
+- Info gathering from public sources:  
+  - WHOIS, DNS records, Google dorking, social media, press releases.  
+- Exam keyword: **“target unaware,” “public info.”**
+
+### Active Recon
+- **Direct interaction** with target (detectable, may be logged).  
+- Tools & methods:  
+  - Port scans, ping sweeps, vuln scanners, social engineering.  
+- Requires **written, signed contract** (legality!).  
+- Exam keyword: **“direct probing,” “can be detected.”**
