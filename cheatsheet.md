@@ -362,4 +362,19 @@ Tip: Responsibility shifts **more to the CSP** as you go from IaaS → SaaS.
   - MSA = ongoing  
   - SOW = specific project  
   - NDA = confidentiality  
-  - BPA = partnership/profit  
+  - BPA = partnership/profit
+
+
+
+  # Consequences of Non-Compliance (Domain 5.4)
+
+| Consequence         | Explanation                                                                 | Exam Keywords / Scenario                                                                 |
+|---------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| **Fines**           | Monetary penalties imposed by regulators for non-compliance.                | “Financial penalty,” “monetary punishment,” GDPR (up to 4% global revenue), PCI fines.   |
+| **Sanctions**       | Legal enforcement → civil or criminal charges.                             | “Criminal liability,” “government action,” mishandling classified data, export violations.|
+| **Reputational Damage** | Loss of trust from customers, partners, investors; long-lasting impact.     | “Loss of customer trust,” “brand value harmed,” major data breach disclosure.            |
+| **Loss of License** | Revocation of authority to operate in industry or handle certain data.      | “Authorization removed,” “regulator shut down,” HIPAA/financial license revoked.         |
+| **Contractual Impacts** | Business agreement penalties → fines, SLA breaches, contract termination.   | “Breach of contract,” “SLA penalties,” “partnership termination,” NDA violations.        |
+
+
+  
