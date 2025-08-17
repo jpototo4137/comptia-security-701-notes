@@ -167,3 +167,22 @@ Tip: Responsibility shifts **more to the CSP** as you go from IaaS → SaaS.
 | **Data Subject (GDPR)**    | The individual whose data is collected (e.g., customer)      |
 
 🔎 *“Day-to-day” = custodian* (EXAM!)
+
+| **Policy**                      | **Purpose/Example**                                          |
+| ------------------------------- | ------------------------------------------------------------ |
+| **AUP (Acceptable Use Policy)** | Defines what users can/can’t do with company IT (e.g., no social media at work) |
+| **Information Security Policy** | Org-wide security goals and direction                        |
+| **Business Continuity Policy**  | Keep operations running during disruptions                   |
+| **Disaster Recovery Policy**    | Focused on recovery after disaster or attack                 |
+| **Incident Response Policy**    | High-level response framework for cyber incidents            |
+| **SDLC Policy**                 | Security integration into software development lifecycle     |
+| **Change Management**           | Control risks when changing systems                          |
+
+
+
+| **Standard**      | **What it Covers**                               |
+| ----------------- | ------------------------------------------------ |
+| **NIST/CIS**      | Password policies, benchmarks                    |
+| **ISO 27001**     | ISMS (Info Sec Management System)                |
+| **FIPS 140-2/3**  | Federal-level encryption requirements            |
+| **NFPA/ANSI/ISO** | Physical security (access badges, HVAC, cameras) |
