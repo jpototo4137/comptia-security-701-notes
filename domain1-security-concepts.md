@@ -56,6 +56,9 @@
 - Actual access & usage by subject  
 - Enforced by **Policy Enforcement Point (PEP)** (e.g. Azure Entra ID)
 
+<img width="2986" height="1664" alt="image" src="https://github.com/user-attachments/assets/d37f90c5-8f7b-4ce0-b0c0-73e3848b0c87" />
+
+
 ---
 
 ### Physical Security
